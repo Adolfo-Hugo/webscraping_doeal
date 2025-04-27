@@ -76,10 +76,5 @@ Onde `dd-mm-YYYY` representa a data de execução do script.
 - O script foi desenvolvido para execução local
 - Verifique periodicamente por atualizações que possam afetar o funcionamento do scraper
 
-## Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
-## Licença
-
-[MIT](https://choosealicense.com/licenses/mit/)
