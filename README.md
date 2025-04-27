@@ -1,40 +1,85 @@
-Web Scraper de Diário Oficial
-Este projeto é um web scraper automatizado desenvolvido em Python, utilizando Selenium para interação com páginas web e Pandas/Openpyxl para manipulação e armazenamento de dados em arquivos Excel.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-Descrição
-O script realiza a extração de informações de uma página específica do Diário Oficial do Estado de Alagoas. Ele busca informações relacionadas a clientes com base em um código CACEAL e um intervalo de datas especificado pelo usuário.
+# Web Scraper de Diário Oficial
 
-Funcionalidades
-Busca automatizada: O script realiza buscas no site do Diário Oficial com base no código CACEAL de cada cliente.
-Manipulação de dados: Os resultados das buscas são armazenados em uma lista e, posteriormente, salvos em arquivos Excel.
-Relatórios detalhados: O script salva os resultados tanto utilizando Pandas quanto Openpyxl, gerando arquivos Excel com os dados extraídos.
-Interface de linha de comando: Permite que o usuário insira o período de busca diretamente pela linha de comando.
-Tecnologias Utilizadas
-Python: Linguagem principal do projeto.
-Selenium: Utilizado para automatizar a navegação e extração de informações da web.
-Pandas: Utilizado para manipulação e salvamento de dados em arquivos Excel.
-Openpyxl: Utilizado para manipulação de planilhas Excel.
-Tqdm: Utilizado para exibir uma barra de progresso durante a execução do script.
-Como Usar
-Instale as dependências:
+## Descrição do Projeto
 
-Utilize pip para instalar as bibliotecas necessárias:
-bash
-Copiar código
-pip install selenium pandas openpyxl tqdm webdriver_manager
-Execute o script:
+Este projeto é um web scraper automatizado desenvolvido em Python para extrair informações do Diário Oficial do Estado de Alagoas. O script busca dados de clientes com base em códigos CACEAL e um intervalo de datas especificado pelo usuário, armazenando os resultados em arquivos Excel.
 
-Certifique-se de ter o arquivo clientes_caceal.xlsx no mesmo diretório que o script. Esse arquivo deve conter uma coluna chamada caceal e outra chamada Razao_social.
-Execute o script e insira o período inicial e final quando solicitado:
-bash
-Copiar código
-python nome_do_script.py
-Resultados:
+## Funcionalidades Principais
 
-Os resultados serão salvos automaticamente em arquivos Excel, com o nome dados_encontrados_dd-mm-YYYY.xlsx, onde dd-mm-YYYY representa a data de execução do script.
+- Busca automatizada no site do Diário Oficial usando códigos CACEAL
+- Armazenamento de resultados em arquivos Excel (formato .xlsx)
+- Interface de linha de comando para inserção do período de busca
+- Geração de relatórios detalhados usando Pandas e Openpyxl
+- Barra de progresso para acompanhamento da execução
 
-Observações
-Certifique-se de ter o Chrome instalado e atualizado, pois o webdriver_manager será utilizado para gerenciar o driver do Chrome automaticamente.
-O script foi desenvolvido para ser executado em uma máquina local com Python instalado.
+## Tecnologias Utilizadas
 
-Adicionei a planilha "clientes_caceal.xlsx" onde é necessário alterar as informações de acordo como está em modelo.
+- **Python** - Linguagem principal do projeto
+- **Selenium** - Automação de navegação e extração web
+- **Pandas** - Manipulação e exportação de dados
+- **Openpyxl** - Manipulação de planilhas Excel
+- **Tqdm** - Exibição de barra de progresso
+- **webdriver_manager** - Gerenciamento automático do ChromeDriver
+
+## Pré-requisitos
+
+- Python 3.x instalado
+- Google Chrome instalado e atualizado
+- Arquivo `clientes_caceal.xlsx` com as colunas:
+  - `caceal` (códigos CACEAL)
+  - `Razao_social` (nomes dos clientes)
+
+## Instalação
+
+1. Clone este repositório:
+   ```
+   git clone [URL_DO_REPOSITORIO]
+   ```
+
+2. Instale as dependências:
+   ```
+   pip install selenium pandas openpyxl tqdm webdriver_manager
+   ```
+
+3. Prepare o arquivo de clientes:
+   - Certifique-se que o arquivo `clientes_caceal.xlsx` está no mesmo diretório do script
+   - Preencha com os códigos CACEAL e nomes dos clientes conforme o modelo
+
+## Como Usar
+
+1. Execute o script:
+   ```
+   python nome_do_script.py
+   ```
+
+2. Quando solicitado, insira:
+   - Data inicial (formato DD/MM/AAAA)
+   - Data final (formato DD/MM/AAAA)
+
+3. Aguarde a execução:
+   - O script mostrará uma barra de progresso
+   - Os resultados serão salvos automaticamente
+
+## Saída
+
+Os arquivos gerados terão o formato:
+```
+dados_encontrados_dd-mm-YYYY.xlsx
+```
+Onde `dd-mm-YYYY` representa a data de execução do script.
+
+## Observações Importantes
+
+- Mantenha o Google Chrome atualizado
+- O script foi desenvolvido para execução local
+- Verifique periodicamente por atualizações que possam afetar o funcionamento do scraper
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+## Licença
+
+[MIT](https://choosealicense.com/licenses/mit/)
